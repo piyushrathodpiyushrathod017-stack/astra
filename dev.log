@@ -1,0 +1,41 @@
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.166.22.1:3000
+- Environments: .env
+✓ Ready in 1445ms
+✓ Running next.config.ts took 98ms
+
+○ Compiling / ...
+ GET / 200 in 16.7s (next.js: 16.0s, application-code: 682ms)
+ GET / 200 in 258ms (next.js: 16ms, application-code: 242ms)
+ GET /atlas 404 in 1173ms (next.js: 960ms, application-code: 213ms)
+ GET /astra 404 in 186ms (next.js: 14ms, application-code: 172ms)
+ GET /docs 404 in 148ms (next.js: 23ms, application-code: 125ms)
+ GET /atlas 404 in 133ms (next.js: 20ms, application-code: 113ms)
+ GET / 200 in 1252ms (next.js: 556ms, application-code: 696ms)
+ GET /astra 404 in 542ms (next.js: 57ms, application-code: 485ms)
+ GET /astra 404 in 365ms (next.js: 98ms, application-code: 267ms)
+ GET /atlas 404 in 33ms (next.js: 15ms, application-code: 18ms)
+ GET /atlas 404 in 142ms (next.js: 14ms, application-code: 128ms)
+ GET /compare 404 in 18ms (next.js: 7ms, application-code: 11ms)
+ GET /compare 404 in 119ms (next.js: 10ms, application-code: 109ms)
+ GET /tools 404 in 17ms (next.js: 7ms, application-code: 10ms)
+ GET /tools 404 in 111ms (next.js: 8ms, application-code: 103ms)
+ GET /knowledge 404 in 18ms (next.js: 7ms, application-code: 11ms)
+ GET /knowledge 404 in 100ms (next.js: 6ms, application-code: 94ms)
+ GET /blog 404 in 16ms (next.js: 7ms, application-code: 9ms)
+ GET /blog 404 in 101ms (next.js: 8ms, application-code: 93ms)
+ GET /docs 404 in 16ms (next.js: 7ms, application-code: 9ms)
+ GET /docs 404 in 109ms (next.js: 14ms, application-code: 96ms)
+✓ Compiled in 41.5s
+ GET / 200 in 15.3s (next.js: 12.5s, application-code: 2.8s)
+ GET /docs 404 in 10.9s (next.js: 10.5s, application-code: 428ms)
+ GET /docs 404 in 10.9s (next.js: 10.3s, application-code: 602ms)
+ GET /docs 404 in 10.9s (next.js: 10.4s, application-code: 530ms)
+ GET /docs 404 in 40s (next.js: 40.0s, application-code: 336ms)
+ GET /docs 404 in 10.9s (next.js: 10.8s, application-code: 163ms)
+ GET /docs 404 in 11.0s (next.js: 10.7s, application-code: 277ms)
+ GET /docs 404 in 5.0s (next.js: 1749ms, application-code: 3.3s)
+ GET /docs 404 in 5.1s (next.js: 1571ms, application-code: 3.5s)
+ GET /docs 404 in 5.1s (next.js: 1618ms, application-code: 3.4s)
+ GET /docs 404 in 5.1s (next.js: 1676ms, application-code: 3.4s)
