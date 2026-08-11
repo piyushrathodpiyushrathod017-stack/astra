@@ -1,0 +1,46 @@
+[    2369ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    3001ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    5566ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:24
+[    5567ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:24
+[    6216ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    6393ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    8972ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[    8973ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[   27539ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   29253ms] [LOG] [Fast Refresh] done in 1820ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   30635ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   37956ms] [LOG] [Fast Refresh] done in 6565ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   38084ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   38538ms] [LOG] [Fast Refresh] done in 563ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   39751ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   39799ms] [LOG] [Fast Refresh] done in 149ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   40220ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   40267ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   40816ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   41087ms] [LOG] [Fast Refresh] done in 383ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  136880ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  149167ms] [LOG] [Fast Refresh] done in 12318ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  214344ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  218662ms] [LOG] [Fast Refresh] done in 4433ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  252746ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=slWQ9WIgh5UtpWGqy340J' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  256126ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=slWQ9WIgh5UtpWGqy340J' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  259490ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=slWQ9WIgh5UtpWGqy340J' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[  280298ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  336611ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  336611ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  339404ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  339786ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  340407ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  341535ms] [LOG] [Fast Refresh] done in 1252ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  341873ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  341874ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  360071ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  365221ms] [LOG] [Fast Refresh] done in 5079ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  365251ms] [LOG] [Fast Refresh] done in 5079ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  365441ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  365441ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  365559ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  365559ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  365570ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  365570ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  378809ms] [LOG] [Fast Refresh] done in 5079ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776

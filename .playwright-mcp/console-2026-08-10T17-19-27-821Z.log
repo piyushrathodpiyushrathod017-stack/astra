@@ -1,0 +1,21 @@
+[    1304ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:24
+[    1304ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:24
+[    1860ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2984ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    4762ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[    4762ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[    4832ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[    4832ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[    4894ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    8763ms] [LOG] [Fast Refresh] done in 3940ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    9541ms] [LOG] [Fast Refresh] done in 3940ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   14535ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   15466ms] [LOG] [Fast Refresh] done in 1041ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   35224ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   45782ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=zTypHgpRs40Re5RghkOvW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[   49161ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=zTypHgpRs40Re5RghkOvW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[   52532ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=zTypHgpRs40Re5RghkOvW' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16256
+[   78610ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  117392ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  117775ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:24
+[  117788ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:24

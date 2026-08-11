@@ -1,0 +1,7 @@
+[    6203ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/14881-9a8024cc8949f6fc.js:0
+[    6222ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/80897-4b57a0d58a611ba8.js:0
+[    6222ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/code-view-baed142867d27f5f.js:0
+[    6223ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/88745-ccd4adc1011d6411.js:0
+[    6223ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/40039-34eeaa33261c2c5d.js:0
+[    6224ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/2850-b24f6dc366ad9071.js:0
+[    6224ms] [ERROR] Failed to load resource: net::ERR_CERT_VERIFIER_CHANGED @ https://github.githubassets.com/assets/keyboard-shortcuts-dialog-c08482f766fee235.js:0

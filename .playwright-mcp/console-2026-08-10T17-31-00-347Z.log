@@ -1,0 +1,21 @@
+[    1255ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[    1255ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[    1788ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    2065ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    3611ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[    3611ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  105734ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  106890ms] [LOG] [Fast Refresh] done in 1241ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  107170ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  107170ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  107247ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  107247ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  107266ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  107266ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  107405ms] [ERROR] Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template). @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  108218ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  108220ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  108220ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  108289ms] [WARNING] Failed to decode downloaded font: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap @ http://localhost:3000/:0
+[  108289ms] [WARNING] OTS parsing error: invalid sfntVersion: 791289955 @ http://localhost:3000/:0
+[  109122ms] [LOG] [Fast Refresh] done in 1177ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776

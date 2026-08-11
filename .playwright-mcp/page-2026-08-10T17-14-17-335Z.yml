@@ -1,0 +1,298 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "ASTRA" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e11]:
+          - link "ASTRA" [ref=e12] [cursor=pointer]:
+            - /url: /astra
+          - link "AI Atlas" [ref=e13] [cursor=pointer]:
+            - /url: /atlas
+          - link "Compare" [ref=e14] [cursor=pointer]:
+            - /url: /compare
+          - link "Tools" [ref=e15] [cursor=pointer]:
+            - /url: /tools
+          - link "Knowledge" [ref=e16] [cursor=pointer]:
+            - /url: /knowledge
+          - link "Blog" [ref=e17] [cursor=pointer]:
+            - /url: /blog
+          - link "Docs" [ref=e18] [cursor=pointer]:
+            - /url: /docs
+      - generic [ref=e19]:
+        - button "Search... ⌘K" [ref=e20]:
+          - generic [ref=e21]: Search...
+          - generic [ref=e22]: ⌘K
+        - button "Toggle theme" [ref=e23]
+  - main [ref=e25]:
+    - generic [ref=e45]:
+      - generic [ref=e46]: The AI Ecosystem
+      - heading "The AI ecosystem, intelligently organized." [level=1] [ref=e48]
+      - paragraph [ref=e49]: Discover, compare, and understand AI tools, models, and technologies through an intelligent ecosystem platform.
+      - generic [ref=e50]:
+        - link "Explore ASTRA" [ref=e51] [cursor=pointer]:
+          - /url: /astra
+        - link "Explore AI Atlas" [ref=e54] [cursor=pointer]:
+          - /url: /atlas
+    - generic [ref=e56]:
+      - generic [ref=e58]:
+        - heading "What is ASTRA?" [level=2] [ref=e59]
+        - paragraph [ref=e60]: A premium AI ecosystem platform designed for the modern AI era.
+      - generic [ref=e61]:
+        - generic [ref=e63]:
+          - heading "AI Discovery" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Explore a comprehensive directory of AI tools, models, and technologies with detailed profiles and comparisons.
+        - generic [ref=e78]:
+          - heading "Smart Comparisons" [level=3] [ref=e85]
+          - paragraph [ref=e86]: Make informed decisions with evidence-based comparisons, transparent scoring, and detailed analysis.
+        - generic [ref=e88]:
+          - heading "Knowledge Base" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Learn AI through comprehensive guides, tutorials, and in-depth articles from beginner to expert level.
+    - generic [ref=e96]:
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - heading "AI Atlas" [level=2] [ref=e100]
+          - paragraph [ref=e101]: Discover the entire AI ecosystem in one place.
+        - link "View All" [ref=e102] [cursor=pointer]:
+          - /url: /atlas
+      - generic [ref=e105]:
+        - link [ref=e107] [cursor=pointer]:
+          - /url: /atlas/coding
+          - generic [ref=e108]:
+            - heading "AI Coding" [level=3] [ref=e113]
+            - paragraph [ref=e114]: 120+ tools
+        - link [ref=e116] [cursor=pointer]:
+          - /url: /atlas/local-ai
+          - generic [ref=e117]:
+            - heading "Local AI" [level=3] [ref=e122]
+            - paragraph [ref=e123]: 80+ tools
+        - link [ref=e125] [cursor=pointer]:
+          - /url: /models
+          - generic [ref=e126]:
+            - heading "AI Models" [level=3] [ref=e132]
+            - paragraph [ref=e133]: 200+ models
+        - link [ref=e135] [cursor=pointer]:
+          - /url: /atlas
+          - generic [ref=e136]:
+            - heading "AI APIs" [level=3] [ref=e140]
+            - paragraph [ref=e141]: 50+ services
+    - generic [ref=e143]:
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - heading "Compare AI Tools" [level=2] [ref=e147]
+          - paragraph [ref=e148]: Make informed decisions with transparent, evidence-based comparisons.
+        - link "View All" [ref=e149] [cursor=pointer]:
+          - /url: /compare
+      - generic [ref=e152]:
+        - generic [ref=e159]:
+          - heading "GPT-4 vs Claude 3.5" [level=3] [ref=e160]
+          - paragraph [ref=e161]: Detailed comparison of capabilities, pricing, and performance.
+          - generic [ref=e162]: Popular
+        - generic [ref=e169]:
+          - heading "Gemini vs Llama 3" [level=3] [ref=e170]
+          - paragraph [ref=e171]: "Open-source vs proprietary: which model fits your needs?"
+          - generic [ref=e172]: New
+    - generic [ref=e174]:
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - heading "AI Tools Directory" [level=2] [ref=e178]
+          - paragraph [ref=e179]: Browse curated AI tools for every use case.
+        - link "View All" [ref=e180] [cursor=pointer]:
+          - /url: /tools
+      - generic [ref=e183]:
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - heading "ChatGPT" [level=3] [ref=e188]
+            - paragraph [ref=e189]: Chat
+          - generic [ref=e190]: "4.8"
+        - generic [ref=e193]:
+          - generic [ref=e194]:
+            - heading "Midjourney" [level=3] [ref=e195]
+            - paragraph [ref=e196]: Image
+          - generic [ref=e197]: "4.7"
+        - generic [ref=e200]:
+          - generic [ref=e201]:
+            - heading "GitHub Copilot" [level=3] [ref=e202]
+            - paragraph [ref=e203]: Coding
+          - generic [ref=e204]: "4.6"
+    - generic [ref=e206]:
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - heading "Knowledge Base" [level=2] [ref=e210]
+          - paragraph [ref=e211]: Learn AI through comprehensive guides and tutorials.
+        - link "View All" [ref=e212] [cursor=pointer]:
+          - /url: /knowledge
+      - generic [ref=e215]:
+        - generic [ref=e217]:
+          - heading "Getting Started with AI" [level=3] [ref=e220]
+          - generic [ref=e221]: Beginner
+        - generic [ref=e223]:
+          - heading "Understanding LLMs" [level=3] [ref=e226]
+          - generic [ref=e227]: Intermediate
+        - generic [ref=e229]:
+          - heading "Building AI Apps" [level=3] [ref=e232]
+          - generic [ref=e233]: Advanced
+    - generic [ref=e235]:
+      - generic [ref=e237]:
+        - heading "AI Coding" [level=2] [ref=e238]
+        - paragraph [ref=e239]: The best AI-powered coding tools and assistants.
+      - generic [ref=e240]:
+        - generic [ref=e242]:
+          - heading "GitHub Copilot" [level=3] [ref=e247]
+          - paragraph [ref=e248]: AI pair programmer
+        - generic [ref=e250]:
+          - heading "Cursor" [level=3] [ref=e254]
+          - paragraph [ref=e255]: AI-first code editor
+        - generic [ref=e257]:
+          - heading "Tabnine" [level=3] [ref=e262]
+          - paragraph [ref=e263]: Code completion AI
+    - generic [ref=e265]:
+      - generic [ref=e267]:
+        - generic [ref=e268]:
+          - heading "Latest from the Blog" [level=2] [ref=e269]
+          - paragraph [ref=e270]: Stay updated with the latest AI insights and news.
+        - link "View All" [ref=e271] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e274]:
+        - generic [ref=e276]:
+          - heading "The Future of AI in 2026" [level=3] [ref=e277]
+          - paragraph [ref=e278]: Aug 8, 2026
+        - generic [ref=e280]:
+          - heading "Open Source AI Models Rise" [level=3] [ref=e281]
+          - paragraph [ref=e282]: Aug 5, 2026
+        - generic [ref=e284]:
+          - heading "AI Safety Best Practices" [level=3] [ref=e285]
+          - paragraph [ref=e286]: Aug 1, 2026
+    - generic [ref=e288]:
+      - generic [ref=e290]:
+        - heading "Built for Scale" [level=2] [ref=e291]
+        - paragraph [ref=e292]: ASTRA is designed with enterprise-grade architecture.
+      - generic [ref=e293]:
+        - generic [ref=e295]:
+          - heading "Microservices" [level=3] [ref=e302]
+          - paragraph [ref=e303]: Modular architecture for independent scaling.
+        - generic [ref=e305]:
+          - heading "Security First" [level=3] [ref=e309]
+          - paragraph [ref=e310]: End-to-end encryption and compliance.
+        - generic [ref=e312]:
+          - heading "Fast & Reliable" [level=3] [ref=e316]
+          - paragraph [ref=e317]: Optimized for performance and uptime.
+    - generic [ref=e319]:
+      - generic [ref=e321]:
+        - heading "Roadmap" [level=2] [ref=e322]
+        - paragraph [ref=e323]: See what is coming next for ASTRA.
+      - generic [ref=e326]:
+        - generic [ref=e327]:
+          - generic [ref=e329]: Q3 2026
+          - heading "Foundation" [level=3] [ref=e330]
+          - paragraph [ref=e331]: Core platform and database
+        - generic [ref=e332]:
+          - generic [ref=e334]: Q4 2026
+          - heading "Intelligence" [level=3] [ref=e335]
+          - paragraph [ref=e336]: AI-powered features
+        - generic [ref=e337]:
+          - generic [ref=e339]: Q1 2027
+          - heading "Scale" [level=3] [ref=e340]
+          - paragraph [ref=e341]: Enterprise capabilities
+      - link "View Full Roadmap" [ref=e343] [cursor=pointer]:
+        - /url: /astra/roadmap
+    - generic [ref=e348]:
+      - heading "Ready to explore the AI ecosystem?" [level=2] [ref=e349]
+      - paragraph [ref=e350]: Start discovering the best AI tools and models for your needs.
+      - generic [ref=e351]:
+        - link "Get Started" [ref=e352] [cursor=pointer]:
+          - /url: /atlas
+        - link "Read Documentation" [ref=e355] [cursor=pointer]:
+          - /url: /docs
+  - contentinfo [ref=e356]:
+    - generic [ref=e357]:
+      - generic [ref=e358]:
+        - generic [ref=e359]:
+          - link "ASTRA" [ref=e360] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e366]: The intelligent AI ecosystem. Discover, compare, and understand AI tools and technologies.
+        - generic [ref=e367]:
+          - heading "ASTRA" [level=3] [ref=e368]
+          - list [ref=e369]:
+            - listitem [ref=e370]:
+              - link "Overview" [ref=e371] [cursor=pointer]:
+                - /url: /astra
+            - listitem [ref=e372]:
+              - link "Features" [ref=e373] [cursor=pointer]:
+                - /url: /astra/features
+            - listitem [ref=e374]:
+              - link "Architecture" [ref=e375] [cursor=pointer]:
+                - /url: /astra/architecture
+            - listitem [ref=e376]:
+              - link "Philosophy" [ref=e377] [cursor=pointer]:
+                - /url: /astra/philosophy
+            - listitem [ref=e378]:
+              - link "Roadmap" [ref=e379] [cursor=pointer]:
+                - /url: /astra/roadmap
+            - listitem [ref=e380]:
+              - link "Changelog" [ref=e381] [cursor=pointer]:
+                - /url: /astra/changelog
+        - generic [ref=e382]:
+          - heading "AI Ecosystem" [level=3] [ref=e383]
+          - list [ref=e384]:
+            - listitem [ref=e385]:
+              - link "AI Atlas" [ref=e386] [cursor=pointer]:
+                - /url: /atlas
+            - listitem [ref=e387]:
+              - link "Tools" [ref=e388] [cursor=pointer]:
+                - /url: /tools
+            - listitem [ref=e389]:
+              - link "Models" [ref=e390] [cursor=pointer]:
+                - /url: /models
+            - listitem [ref=e391]:
+              - link "Compare" [ref=e392] [cursor=pointer]:
+                - /url: /compare
+            - listitem [ref=e393]:
+              - link "AI Coding" [ref=e394] [cursor=pointer]:
+                - /url: /atlas/coding
+            - listitem [ref=e395]:
+              - link "Local AI" [ref=e396] [cursor=pointer]:
+                - /url: /atlas/local-ai
+        - generic [ref=e397]:
+          - heading "Knowledge" [level=3] [ref=e398]
+          - list [ref=e399]:
+            - listitem [ref=e400]:
+              - link "Knowledge Base" [ref=e401] [cursor=pointer]:
+                - /url: /knowledge
+            - listitem [ref=e402]:
+              - link "Blog" [ref=e403] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e404]:
+              - link "Documentation" [ref=e405] [cursor=pointer]:
+                - /url: /docs
+            - listitem [ref=e406]:
+              - link "Tutorials" [ref=e407] [cursor=pointer]:
+                - /url: /knowledge?tutorials
+            - listitem [ref=e408]:
+              - link "Glossary" [ref=e409] [cursor=pointer]:
+                - /url: /knowledge?glossary
+        - generic [ref=e410]:
+          - heading "Developers" [level=3] [ref=e411]
+          - list [ref=e412]:
+            - listitem [ref=e413]:
+              - link "Getting Started" [ref=e414] [cursor=pointer]:
+                - /url: /docs/getting-started
+            - listitem [ref=e415]:
+              - link "API Reference" [ref=e416] [cursor=pointer]:
+                - /url: /docs/api
+            - listitem [ref=e417]:
+              - link "Architecture" [ref=e418] [cursor=pointer]:
+                - /url: /docs/architecture
+            - listitem [ref=e419]:
+              - link "Contributing" [ref=e420] [cursor=pointer]:
+                - /url: /docs/contributing
+      - generic [ref=e421]:
+        - paragraph [ref=e422]: © 2026 ASTRA. All rights reserved.
+        - generic [ref=e423]:
+          - link "Privacy Policy" [ref=e424] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=e425] [cursor=pointer]:
+            - /url: /terms
+          - link "Contact" [ref=e426] [cursor=pointer]:
+            - /url: /contact
+  - button "Open Next.js Dev Tools" [ref=e432] [cursor=pointer]
