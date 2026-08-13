@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DocsLayout } from "@/components/layout/docs-layout"
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -21,6 +22,7 @@ export default function DocsPage() {
     <DocsLayout>
       <div className="space-y-8">
         <div>
+          <Breadcrumbs items={[{ label: "Docs", href: "/docs" }]} />
           <h1 className="text-4xl font-bold tracking-tight">Documentation</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Everything you need to build with ASTRA and the AI Ecosystem.

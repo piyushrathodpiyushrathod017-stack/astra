@@ -1,7 +1,9 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { createMetadata } from "@/lib/seo";
 import { ArrowLeft, CheckCircle, XCircle, Minus } from "lucide-react";
 
 const comparisons: Record<string, {
@@ -58,6 +60,16 @@ const fallbackComparison = {
 
 export function generateStaticParams() {
   return Object.keys(comparisons).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const comp = comparisons[slug];
+  return createMetadata({
+    title: comp?.title || slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    description: `Compare ${comp?.items.map((i) => i.name).join(" vs ") || "AI models"} — features, ratings, and verdict.`,
+    path: `/compare/${slug}`,
+  });
 }
 
 export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {

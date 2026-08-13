@@ -13,6 +13,7 @@ import {
 import { AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
 import { Wrench, Star } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
+import { tools } from "@/lib/mock-data";
 
 export const metadata: Metadata = createMetadata({
   title: "AI Tools Directory",
@@ -30,18 +31,6 @@ export const metadata: Metadata = createMetadata({
     "AI software",
   ],
 });
-
-const tools = [
-  { name: "ChatGPT", category: "Chat", rating: "4.8", description: "OpenAI's conversational AI assistant." },
-  { name: "Claude", category: "Chat", rating: "4.7", description: "Anthropic's helpful, harmless, and honest AI." },
-  { name: "Midjourney", category: "Image", rating: "4.7", description: "AI image generation from text prompts." },
-  { name: "GitHub Copilot", category: "Coding", rating: "4.6", description: "AI pair programmer for code completion." },
-  { name: "DALL-E 3", category: "Image", rating: "4.5", description: "OpenAI's text-to-image model." },
-  { name: "Perplexity", category: "Search", rating: "4.6", description: "AI-powered search engine with citations." },
-  { name: "Runway", category: "Video", rating: "4.4", description: "AI video generation and editing." },
-  { name: "ElevenLabs", category: "Audio", rating: "4.5", description: "AI voice synthesis and cloning." },
-  { name: "Notion AI", category: "Productivity", rating: "4.3", description: "AI-powered workspace assistant." },
-];
 
 export default function ToolsPage() {
   return (

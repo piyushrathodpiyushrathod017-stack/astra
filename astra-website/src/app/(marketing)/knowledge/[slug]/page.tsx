@@ -1,8 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
+import { createMetadata } from "@/lib/seo";
 
 const articles: Record<string, {
   title: string;
@@ -51,6 +54,14 @@ export function generateStaticParams() {
   return Object.keys(articles).map((slug) => ({ slug }));
 }
 
+export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Metadata {
+  return createMetadata({
+    title: "Knowledge Article",
+    description: "Learn AI with comprehensive guides and tutorials on ASTRA.",
+    path: "/knowledge",
+  });
+}
+
 export default async function KnowledgeArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articles[slug] || { ...fallbackArticle, title: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) };
@@ -59,13 +70,12 @@ export default async function KnowledgeArticlePage({ params }: { params: Promise
     <>
       <AstraSection className="pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AstraContainer>
-          <Link
-            href="/knowledge"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-astra-primary mb-8 transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Knowledge
-          </Link>
+          <Breadcrumbs
+            items={[
+              { label: "Knowledge", href: "/knowledge" },
+              { label: article.title, href: `/knowledge/${slug}` },
+            ]}
+          />
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">

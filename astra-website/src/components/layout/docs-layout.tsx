@@ -13,74 +13,23 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
                 <Link href="/docs" className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
                   Introduction
                 </Link>
-                <Link href={"/docs/getting-started/quick-start" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
+                <Link href={"/docs/getting-started" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
                   Quick Start
                 </Link>
-                <Link href={"/docs/getting-started/installation" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Installation
-                </Link>
-                <Link href={"/docs/getting-started/configuration" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Configuration
-                </Link>
               </nav>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold mb-2">ASTRA</h3>
+              <h3 className="text-sm font-semibold mb-2">Reference</h3>
               <nav className="space-y-1">
-                <Link href={"/docs/astra/core-concepts" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Core Concepts
+                <Link href={"/docs/api" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
+                  API Reference
                 </Link>
-                <Link href={"/docs/astra/modules" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Modules
+                <Link href={"/docs/architecture" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
+                  Architecture
                 </Link>
-                <Link href={"/docs/astra/memory" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Memory
-                </Link>
-              </nav>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold mb-2">Atlas</h3>
-              <nav className="space-y-1">
-                <Link href={"/docs/atlas/coding" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Coding
-                </Link>
-                <Link href={"/docs/atlas/local-ai" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Local AI
-                </Link>
-              </nav>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold mb-2">API Reference</h3>
-              <nav className="space-y-1">
-                <Link href={"/docs/api/rest" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  REST API
-                </Link>
-                <Link href={"/docs/api/graphql" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  GraphQL
-                </Link>
-                <Link href={"/docs/api/websockets" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  WebSockets
-                </Link>
-                <Link href={"/docs/api/sdk" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  SDK
-                </Link>
-              </nav>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold mb-2">Advanced</h3>
-              <nav className="space-y-1">
-                <Link href={"/docs/advanced/deployment" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Deployment
-                </Link>
-                <Link href={"/docs/advanced/performance" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Performance
-                </Link>
-                <Link href={"/docs/advanced/security" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
-                  Security
+                <Link href={"/docs/contributing" as Route} className="block px-3 py-1.5 text-sm hover:text-primary transition-colors">
+                  Contributing
                 </Link>
               </nav>
             </div>

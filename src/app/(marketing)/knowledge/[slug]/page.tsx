@@ -1,7 +1,9 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { createMetadata } from "@/lib/seo";
 import { ArrowLeft, Clock, BookOpen } from "lucide-react";
 
 const articles: Record<string, {
@@ -49,6 +51,18 @@ const fallbackArticle = {
 
 export function generateStaticParams() {
   return Object.keys(articles).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles[slug];
+  return createMetadata({
+    title: article?.title || slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    description: `Learn about ${article?.title || "AI topics"} — ${article?.category || "AI knowledge"}.`,
+    path: `/knowledge/${slug}`,
+    type: "article",
+    publishedTime: new Date().toISOString(),
+  });
 }
 
 export default async function KnowledgeArticlePage({ params }: { params: Promise<{ slug: string }> }) {

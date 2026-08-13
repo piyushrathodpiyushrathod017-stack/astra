@@ -3,6 +3,7 @@ import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraCard } from "@/components/shared/astra-card";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import {
   AnimatedHero,
   AnimatedHeroBadge,
@@ -50,6 +51,7 @@ export default function KnowledgePage() {
       <AstraSection className="relative pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AnimatedHero>
           <AstraContainer>
+            <Breadcrumbs items={[{ label: "Knowledge", href: "/knowledge" }]} />
             <div className="text-center mb-12">
               <AnimatedHeroBadge>
                 <AstraBadge variant="primary" className="mb-6">

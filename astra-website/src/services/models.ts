@@ -1,3 +1,7 @@
+// UNUSED: This file is not imported anywhere in the codebase.
+// API routes define their own inline mock data instead.
+// Consider importing from @/lib/mock-data.ts or removing this file.
+
 import type { Model, ModelWithScores, ModelFilters } from "@/types/model";
 
 const mockModels: ModelWithScores[] = [

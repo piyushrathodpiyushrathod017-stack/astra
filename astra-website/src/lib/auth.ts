@@ -1,3 +1,6 @@
+// UNUSED: This file is not imported anywhere in the codebase.
+// Consider removing if no longer needed.
+
 export interface User {
   id: string;
   email: string;

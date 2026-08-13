@@ -2,14 +2,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-}
-
 :root {
   --background: #fafaf9;
   --foreground: #1c1917;
@@ -37,6 +29,8 @@
 
   --astra-primary: #6366F1;
   --astra-secondary: #818CF8;
+  --astra-gold: oklch(0.79 0.18 86);
+  --astra-gold-light: oklch(0.90 0.09 86);
   --astra-glow: rgba(99, 102, 241, 0.15);
   --astra-muted: rgba(99, 102, 241, 0.08);
 }
@@ -67,6 +61,8 @@
 
   --astra-primary: #6366F1;
   --astra-secondary: #818CF8;
+  --astra-gold: oklch(0.79 0.18 86);
+  --astra-gold-light: oklch(0.90 0.09 86);
   --astra-glow: rgba(99, 102, 241, 0.2);
   --astra-muted: rgba(99, 102, 241, 0.1);
 }

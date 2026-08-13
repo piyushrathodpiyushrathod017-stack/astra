@@ -13,6 +13,7 @@ import {
 import { AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
 import { Database } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
+import { models } from "@/lib/mock-data";
 
 export const metadata: Metadata = createMetadata({
   title: "AI Models Directory",
@@ -30,18 +31,6 @@ export const metadata: Metadata = createMetadata({
     "LLM directory",
   ],
 });
-
-const models = [
-  { name: "GPT-4o", provider: "OpenAI", type: "Chat", parameters: "Unknown", description: "Most capable OpenAI model for complex tasks." },
-  { name: "Claude 3.5 Sonnet", provider: "Anthropic", type: "Chat", parameters: "Unknown", description: "Balanced performance and speed from Anthropic." },
-  { name: "Gemini 1.5 Pro", provider: "Google", type: "Chat", parameters: "Unknown", description: "Google's most capable multimodal model." },
-  { name: "Llama 3.1 405B", provider: "Meta", type: "Open Source", parameters: "405B", description: "Meta's largest open-source language model." },
-  { name: "Mistral Large", provider: "Mistral", type: "Chat", parameters: "Unknown", description: "High-performance model from Mistral AI." },
-  { name: "Command R+", provider: "Cohere", type: "Chat", parameters: "Unknown", description: "Optimized for RAG and tool use." },
-  { name: "DALL-E 3", provider: "OpenAI", type: "Image", parameters: "Unknown", description: "Text-to-image generation model." },
-  { name: "Stable Diffusion XL", provider: "Stability AI", type: "Image", parameters: "3.5B", description: "Open-source image generation model." },
-  { name: "Whisper", provider: "OpenAI", type: "Audio", parameters: "1.5B", description: "Speech recognition model." },
-];
 
 export default function ModelsPage() {
   return (

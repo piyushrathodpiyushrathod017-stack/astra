@@ -1,3 +1,6 @@
+// UNUSED: This file is not imported anywhere in the codebase (only used in tests).
+// Consider removing if no longer needed.
+
 export class AppError extends Error {
   public readonly statusCode: number;
   public readonly isOperational: boolean;

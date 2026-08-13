@@ -5,6 +5,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// UNUSED: The following functions are not imported anywhere in the codebase.
+// Kept for reference. Consider removing if no longer needed.
+
 export function slugify(text: string): string {
   return text
     .toLowerCase()

@@ -1,7 +1,9 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { createMetadata } from "@/lib/seo";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
 const posts: Record<string, {
@@ -52,6 +54,18 @@ const fallbackPost = {
 
 export function generateStaticParams() {
   return Object.keys(posts).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts[slug];
+  return createMetadata({
+    title: post?.title || slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    description: post?.content[0] || "Read this blog post on ASTRA.",
+    path: `/blog/${slug}`,
+    type: "article",
+    publishedTime: new Date().toISOString(),
+  });
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -5,12 +5,8 @@ import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import {
-  LayoutDashboard,
   FileText,
   Wrench,
-  BarChart3,
-  Settings,
-  Users,
   Database,
 } from "lucide-react";
 
@@ -35,9 +31,6 @@ const quickActions = [
   { label: "Tools", href: "/admin/tools" as Route, icon: <Wrench className="h-5 w-5" /> },
   { label: "Models", href: "/admin/models" as Route, icon: <Database className="h-5 w-5" /> },
   { label: "Articles", href: "/admin/articles" as Route, icon: <FileText className="h-5 w-5" /> },
-  { label: "Comparisons", href: "/admin/comparisons" as Route, icon: <BarChart3 className="h-5 w-5" /> },
-  { label: "Users", href: "/admin/users" as Route, icon: <Users className="h-5 w-5" /> },
-  { label: "Settings", href: "/admin/settings" as Route, icon: <Settings className="h-5 w-5" /> },
 ];
 
 export default function AdminPage() {

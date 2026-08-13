@@ -1,3 +1,6 @@
+// UNUSED: This file is not imported anywhere in the codebase.
+// Kept for reference. Consider removing if no longer needed.
+
 import type { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://astra.ai";

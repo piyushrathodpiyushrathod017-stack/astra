@@ -33,7 +33,7 @@ export function SignUpForm() {
         return;
       }
 
-      router.push("/auth/signin" as Route);
+      router.push("/signin" as Route);
     } catch {
       setError("Something went wrong");
     } finally {
@@ -96,7 +96,7 @@ export function SignUpForm() {
 
       <p className="text-center text-sm text-muted-foreground">
         Already have an account?{" "}
-        <Link href={"/auth/signin" as Route} className="text-primary hover:underline">
+        <Link href={"/signin" as Route} className="text-primary hover:underline">
           Sign in
         </Link>
       </p>

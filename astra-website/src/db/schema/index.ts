@@ -8,7 +8,7 @@ export * from "./categories";
 export * from "./tags";
 export * from "./pricing";
 export * from "./model-families";
-export * from "./model-capabilities";
+
 export * from "./user-roles";
 export * from "./tool-features";
 export * from "./model-deployments";

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 
 interface PageTransitionProps {

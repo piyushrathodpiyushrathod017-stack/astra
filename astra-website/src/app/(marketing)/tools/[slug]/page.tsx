@@ -7,97 +7,37 @@ import { AstraButton } from "@/components/shared/astra-button";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { StructuredDataScript, generateToolStructuredData, generateBreadcrumbStructuredData } from "@/lib/structured-data";
 import { ArrowLeft, Star, ExternalLink, CheckCircle, XCircle, BarChart3 } from "lucide-react";
-
-const tools: Record<string, {
-  name: string;
-  category: string;
-  rating: string;
-  description: string;
-  website: string;
-  pricing: string;
-  features: { name: string; supported: boolean }[];
-  pros: string[];
-  cons: string[];
-}> = {
-  chatgpt: {
-    name: "ChatGPT",
-    category: "Chat",
-    rating: "4.8",
-    description: "OpenAI's conversational AI assistant powered by GPT-4o and GPT-4 models.",
-    website: "https://chat.openai.com",
-    pricing: "Free / $20/mo Plus",
-    features: [
-      { name: "Text Generation", supported: true },
-      { name: "Code Generation", supported: true },
-      { name: "Image Analysis", supported: true },
-      { name: "File Upload", supported: true },
-      { name: "Web Browsing", supported: true },
-      { name: "Plugins", supported: true },
-    ],
-    pros: ["Most capable general-purpose model", "Huge ecosystem of plugins", "Strong code generation"],
-    cons: ["Can be verbose", "Knowledge cutoff limitations", "Rate limits on free tier"],
-  },
-  claude: {
-    name: "Claude",
-    category: "Chat",
-    rating: "4.7",
-    description: "Anthropic's helpful, harmless, and honest AI assistant.",
-    website: "https://claude.ai",
-    pricing: "Free / $20/mo Pro",
-    features: [
-      { name: "Text Generation", supported: true },
-      { name: "Code Generation", supported: true },
-      { name: "Image Analysis", supported: true },
-      { name: "File Upload", supported: true },
-      { name: "Web Browsing", supported: false },
-      { name: "Long Context", supported: true },
-    ],
-    pros: ["Excellent reasoning", "200K context window", "Nuanced responses"],
-    cons: ["No web browsing", "Fewer integrations", "Can be overly cautious"],
-  },
-  midjourney: {
-    name: "Midjourney",
-    category: "Image",
-    rating: "4.7",
-    description: "AI image generation from text prompts, known for artistic quality.",
-    website: "https://midjourney.com",
-    pricing: "$10/mo Basic",
-    features: [
-      { name: "Text to Image", supported: true },
-      { name: "Image to Image", supported: true },
-      { name: "Style Transfer", supported: true },
-      { name: "Upscaling", supported: true },
-      { name: "Inpainting", supported: true },
-      { name: "API Access", supported: false },
-    ],
-    pros: ["Best artistic quality", "Active community", "Regular model updates"],
-    cons: ["Discord-only interface", "No API", "Subscription required"],
-  },
-};
-
-const fallbackTool = {
-  name: "Tool",
-  category: "General",
-  rating: "4.5",
-  description: "AI tool details coming soon.",
-  website: "#",
-  pricing: "TBD",
-  features: [
-    { name: "Feature 1", supported: true },
-    { name: "Feature 2", supported: true },
-    { name: "Feature 3", supported: false },
-  ],
-  pros: ["Pro 1", "Pro 2"],
-  cons: ["Con 1"],
-};
+import { tools, getToolBySlug } from "@/lib/mock-data";
 
 export function generateStaticParams() {
-  return Object.keys(tools).map((slug) => ({ slug }));
+  return tools.map((t) => ({ slug: t.slug }));
 }
 
 export default async function ToolDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = tools[slug] || { ...fallbackTool, name: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) };
+  const mockTool = getToolBySlug(slug);
+  const tool = mockTool
+    ? {
+        ...mockTool,
+        features: mockTool.features.map((f) => ({ name: f, supported: true })),
+        pros: ["High quality", "Well maintained"],
+        cons: ["Could improve documentation"],
+      }
+    : {
+        name: slug.replace(/-/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase()),
+        category: "General",
+        rating: "4.5",
+        description: "AI tool details coming soon.",
+        website: "#",
+        pricing: "TBD",
+        features: [
+          { name: "Feature 1", supported: true },
+          { name: "Feature 2", supported: true },
+          { name: "Feature 3", supported: false },
+        ],
+        pros: ["Pro 1", "Pro 2"],
+        cons: ["Con 1"],
+      };
 
   const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://astra.ai";
 
@@ -211,7 +151,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
         <AstraContainer>
           <h2 className="text-2xl font-bold text-foreground mb-6">Related Comparisons</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Link href="/compare/gpt-4-vs-claude" className="group">
+            <Link href="/compare/gpt-4-vs-claude-35-sonnet" className="group">
               <AstraCard className="transition-all group-hover:border-astra-primary/30">
                 <div className="flex items-center gap-2 mb-2">
                   <BarChart3 className="h-4 w-4 text-astra-primary" />
@@ -220,7 +160,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
                 <AstraBadge variant="secondary">Chat Models</AstraBadge>
               </AstraCard>
             </Link>
-            <Link href="/compare/copilot-vs-cursor" className="group">
+            <Link href="/compare/cursor-vs-github-copilot" className="group">
               <AstraCard className="transition-all group-hover:border-astra-primary/30">
                 <div className="flex items-center gap-2 mb-2">
                   <BarChart3 className="h-4 w-4 text-astra-primary" />

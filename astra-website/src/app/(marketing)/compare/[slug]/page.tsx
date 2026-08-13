@@ -1,8 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { ArrowLeft, CheckCircle, XCircle, Minus } from "lucide-react";
+import { createMetadata } from "@/lib/seo";
 
 const comparisons: Record<string, {
   title: string;
@@ -60,6 +63,14 @@ export function generateStaticParams() {
   return Object.keys(comparisons).map((slug) => ({ slug }));
 }
 
+export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Metadata {
+  return createMetadata({
+    title: "Comparison",
+    description: "Compare AI tools and models side by side on ASTRA.",
+    path: "/compare",
+  });
+}
+
 export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const comp = comparisons[slug] || { ...fallbackComparison, title: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) };
@@ -68,13 +79,12 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
     <>
       <AstraSection className="pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AstraContainer>
-          <Link
-            href="/compare"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-astra-primary mb-8 transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Comparisons
-          </Link>
+          <Breadcrumbs
+            items={[
+              { label: "Compare", href: "/compare" },
+              { label: comp.title, href: `/compare/${slug}` },
+            ]}
+          />
 
           <div className="max-w-3xl">
             <AstraBadge variant="primary" className="mb-4">{comp.category}</AstraBadge>

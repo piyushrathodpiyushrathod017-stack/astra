@@ -1,6 +1,5 @@
-import { pgTable, text, timestamp, integer, boolean, jsonb, uuid } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp, integer, boolean, uuid } from "drizzle-orm/pg-core";
 import { tools } from "./tools";
-import { models } from "./models";
 
 export const tags = pgTable("tags", {
   id: uuid("id").defaultRandom().primaryKey(),
@@ -9,7 +8,7 @@ export const tags = pgTable("tags", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const articleCategories = pgTable("article_categories", {
+export const tagArticleCategories = pgTable("article_categories", {
   id: uuid("id").defaultRandom().primaryKey(),
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
@@ -20,14 +19,14 @@ export const articleCategories = pgTable("article_categories", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
-export const articleTags = pgTable("article_tags", {
+export const tagArticleTags = pgTable("article_tags", {
   id: uuid("id").defaultRandom().primaryKey(),
   articleId: uuid("article_id").notNull(),
   tagId: uuid("tag_id").notNull().references(() => tags.id, { onDelete: "cascade" }),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const toolFeatures = pgTable("tool_features", {
+export const tagToolFeatures = pgTable("tool_features", {
   id: uuid("id").defaultRandom().primaryKey(),
   toolId: uuid("tool_id").notNull().references(() => tools.id, { onDelete: "cascade" }),
   name: text("name").notNull(),
@@ -37,7 +36,7 @@ export const toolFeatures = pgTable("tool_features", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const toolPlatforms = pgTable("tool_platforms", {
+export const tagToolPlatforms = pgTable("tool_platforms", {
   id: uuid("id").defaultRandom().primaryKey(),
   toolId: uuid("tool_id").notNull().references(() => tools.id, { onDelete: "cascade" }),
   platform: text("platform").notNull(),

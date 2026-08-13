@@ -13,6 +13,7 @@ import {
 import { AnimatedSection, AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
 import { BarChart3, ArrowRight } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
+import { comparisons } from "@/lib/mock-data";
 
 export const metadata: Metadata = createMetadata({
   title: "AI Comparisons",
@@ -28,15 +29,6 @@ export const metadata: Metadata = createMetadata({
     "compare AI tools",
   ],
 });
-
-const comparisons = [
-  { title: "GPT-4 vs Claude 3.5 Sonnet", category: "Chat Models", popularity: "Most Popular" },
-  { title: "Gemini vs Llama 3", category: "Open Source vs Proprietary", popularity: "Trending" },
-  { title: "Midjourney vs DALL-E 3", category: "Image Generation", popularity: "Popular" },
-  { title: "Copilot vs Cursor", category: "AI Coding", popularity: "New" },
-  { title: "Perplexity vs ChatGPT", category: "Search & Chat", popularity: "Popular" },
-  { title: "Stable Diffusion vs Flux", category: "Open Source Image", popularity: "New" },
-];
 
 export default function ComparePage() {
   return (
