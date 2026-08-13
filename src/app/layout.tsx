@@ -102,7 +102,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1e1547] via-transparent to-transparent h-[600px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1e1547]/50 via-transparent to-transparent h-[400px]" />
         </div>
         <ThemeProvider
           attribute="class"

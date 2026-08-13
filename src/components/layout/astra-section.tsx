@@ -13,7 +13,7 @@ export function AstraSection({
 }: AstraSectionProps) {
   return (
     <Component
-      className={cn("py-16 sm:py-24", className)}
+      className={cn("py-16 sm:py-20", className)}
     >
       {children}
     </Component>

@@ -39,10 +39,10 @@ export default function PrivacyPage() {
           <p className="mt-4 text-lg text-muted-foreground">
             Your privacy matters to us. Last updated {lastUpdated}.
           </p>
-          <div className="gold-divider mx-auto mt-6 max-w-xs" />
+          <div className="divider mx-auto mt-6 max-w-xs" />
         </div>
 
-        <article className="prose-gold space-y-10">
+        <article className="prose space-y-10">
           <section>
             <h2>1. Introduction</h2>
             <p>

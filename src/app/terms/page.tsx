@@ -39,10 +39,10 @@ export default function TermsPage() {
           <p className="mt-4 text-lg text-muted-foreground">
             Please read these terms carefully. Last updated {lastUpdated}.
           </p>
-          <div className="gold-divider mx-auto mt-6 max-w-xs" />
+          <div className="divider mx-auto mt-6 max-w-xs" />
         </div>
 
-        <article className="prose-gold space-y-10">
+        <article className="prose space-y-10">
           <section>
             <h2>1. Acceptance of Terms</h2>
             <p>

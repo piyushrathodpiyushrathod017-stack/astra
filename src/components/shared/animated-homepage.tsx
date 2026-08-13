@@ -39,24 +39,24 @@ export function AnimatedHomepage() {
         <AnimatedHero className="absolute inset-0">
           <div />
         </AnimatedHero>
-        <AstraContainer className="relative z-10 text-center py-24 sm:py-32">
+        <AstraContainer className="relative z-10 text-center py-16 sm:py-20">
           <AnimatedHeroBadge>
-            <div className="inline-flex items-center gap-2 rounded-full border border-astra-primary/20 bg-astra-muted/60 px-5 py-2 text-sm font-medium text-astra-primary backdrop-blur-sm mb-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-astra-primary/20 bg-astra-muted/60 px-5 py-2 text-sm font-medium text-astra-primary backdrop-blur-sm mb-6">
               <span className="h-2 w-2 rounded-full bg-astra-primary animate-pulse-slow" />
               The AI Ecosystem
             </div>
           </AnimatedHeroBadge>
-          <AnimatedHeroTitle className="mt-2">
+          <AnimatedHeroTitle className="mt-0">
             The AI ecosystem,<br className="hidden sm:block" /> intelligently organized.
           </AnimatedHeroTitle>
-          <AnimatedHeroSubtitle>
+          <AnimatedHeroSubtitle className="mt-6">
             Discover, compare, and understand AI tools, models, and technologies
             through an intelligent ecosystem platform built for the modern AI era.
           </AnimatedHeroSubtitle>
           <AnimatedHeroCta>
             <a
               href="/astra"
-              className="inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-[#b8860b] via-[#d4a843] to-[#b8860b] px-8 py-4 text-sm font-semibold text-[#0c0a09] shadow-lg shadow-[#d4a843]/20 transition-all duration-300 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-[#4F46E5] via-[#6366F1] to-[#4F46E5] px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-[#6366F1]/20 transition-all duration-300 hover:shadow-xl hover:shadow-[#6366F1]/30 hover:scale-[1.02]"
             >
               Explore ASTRA
               <ArrowRight className="h-4 w-4" />
@@ -70,7 +70,7 @@ export function AnimatedHomepage() {
           </AnimatedHeroCta>
 
           {/* Stats bar */}
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
             {[
               { label: "AI Tools", value: "200+" },
               { label: "Models", value: "100+" },
@@ -90,14 +90,14 @@ export function AnimatedHomepage() {
       </section>
 
       {/* 2. ASTRA Introduction */}
-      <AstraSection>
+      <AstraSection className="pt-20 sm:pt-28">
         <AstraContainer>
           <AnimatedSection>
-            <div className="text-center mb-14">
+            <div className="text-center mb-12">
               <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                 <span className="hero-gradient-text">What is ASTRA?</span>
               </h2>
-              <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 A premium AI ecosystem platform designed for the modern AI era.
               </p>
             </div>
@@ -105,7 +105,7 @@ export function AnimatedHomepage() {
           <AnimatedStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" stagger={0.15}>
             <StaggerItem>
               <AstraCard>
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-astra-primary/10 mb-5">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-astra-primary/10 mb-4">
                   <Brain className="h-6 w-6 text-astra-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -119,7 +119,7 @@ export function AnimatedHomepage() {
             </StaggerItem>
             <StaggerItem>
               <AstraCard>
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-astra-primary/10 mb-5">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-astra-primary/10 mb-4">
                   <GitCompare className="h-6 w-6 text-astra-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -133,7 +133,7 @@ export function AnimatedHomepage() {
             </StaggerItem>
             <StaggerItem>
               <AstraCard>
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-astra-primary/10 mb-5">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-astra-primary/10 mb-4">
                   <Compass className="h-6 w-6 text-astra-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -153,7 +153,7 @@ export function AnimatedHomepage() {
       <AstraSection className="bg-gradient-to-b from-secondary/80 via-secondary/50 to-secondary/80">
         <AstraContainer>
           <AnimatedSection>
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex items-end justify-between mb-8">
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                   <span className="hero-gradient-text">AI Atlas</span>
@@ -201,7 +201,7 @@ export function AnimatedHomepage() {
       <AstraSection>
         <AstraContainer>
           <AnimatedSection>
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex items-end justify-between mb-8">
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                   <span className="hero-gradient-text">Compare AI Tools</span>
@@ -265,7 +265,7 @@ export function AnimatedHomepage() {
       <AstraSection className="bg-gradient-to-b from-secondary/80 via-secondary/50 to-secondary/80">
         <AstraContainer>
           <AnimatedSection>
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex items-end justify-between mb-8">
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                   <span className="hero-gradient-text">AI Tools Directory</span>
@@ -306,7 +306,7 @@ export function AnimatedHomepage() {
       <AstraSection>
         <AstraContainer>
           <AnimatedSection>
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex items-end justify-between mb-8">
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                   <span className="hero-gradient-text">Knowledge Base</span>
@@ -345,11 +345,11 @@ export function AnimatedHomepage() {
       <AstraSection className="bg-gradient-to-b from-secondary/80 via-secondary/50 to-secondary/80">
         <AstraContainer>
           <AnimatedSection>
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                 <span className="hero-gradient-text">AI Coding</span>
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                 The best AI-powered coding tools and assistants.
               </p>
             </div>
@@ -378,7 +378,7 @@ export function AnimatedHomepage() {
       <AstraSection>
         <AstraContainer>
           <AnimatedSection>
-            <div className="flex items-end justify-between mb-10">
+            <div className="flex items-end justify-between mb-8">
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                   <span className="hero-gradient-text">Latest from the Blog</span>
@@ -414,11 +414,11 @@ export function AnimatedHomepage() {
       <AstraSection className="bg-gradient-to-b from-secondary/80 via-secondary/50 to-secondary/80">
         <AstraContainer>
           <AnimatedSection>
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                 <span className="hero-gradient-text">Built for Scale</span>
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                 ASTRA is designed with enterprise-grade architecture.
               </p>
             </div>
@@ -465,11 +465,11 @@ export function AnimatedHomepage() {
       <AstraSection>
         <AstraContainer>
           <AnimatedSection>
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
                 <span className="hero-gradient-text">Roadmap</span>
               </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                 See what is coming next for ASTRA.
               </p>
             </div>
@@ -492,7 +492,7 @@ export function AnimatedHomepage() {
               </div>
             </div>
           </AnimatedSection>
-          <div className="text-center mt-10">
+          <div className="text-center mt-8">
             <AstraButton href="/astra/roadmap" variant="ghost">
               View Full Roadmap
               <ArrowRight className="h-4 w-4" />
@@ -508,7 +508,7 @@ export function AnimatedHomepage() {
             <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
               Ready to explore the AI ecosystem?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
               Start discovering the best AI tools and models for your needs.
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">

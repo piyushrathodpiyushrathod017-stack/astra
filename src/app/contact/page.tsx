@@ -62,11 +62,11 @@ export default function ContactPage() {
           <p className="mt-4 text-lg text-muted-foreground">
             We&apos;d love to hear from you. Reach out anytime.
           </p>
-          <div className="gold-divider mx-auto mt-6 max-w-xs" />
+          <div className="divider mx-auto mt-6 max-w-xs" />
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="gold-border rounded-xl bg-card p-8 transition-all duration-300 hover:shadow-lg hover:shadow-astra-gold/5">
+          <div className="border-accent rounded-xl bg-card p-8 transition-all duration-300 hover:shadow-lg hover:shadow-astra-primary/5">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-astra-muted px-4 py-1.5 text-sm font-medium text-astra-primary">
               <span className="h-2 w-2 rounded-full bg-astra-primary animate-pulse-slow" />
               Founder
@@ -120,7 +120,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-astra-primary/20 bg-astra-muted/30 p-8 text-center transition-all duration-300 hover:border-astra-primary/40 hover:shadow-lg hover:shadow-astra-gold/5">
+          <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-astra-primary/20 bg-astra-muted/30 p-8 text-center transition-all duration-300 hover:border-astra-primary/40 hover:shadow-lg hover:shadow-astra-primary/5">
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#25D366]/10">
               <MessageCircle className="h-10 w-10 text-[#25D366]" />
             </div>
@@ -148,8 +148,8 @@ export default function ContactPage() {
           <p className="mt-2 text-center text-muted-foreground">
             Palitana, Bhavnagar district, Gujarat, India
           </p>
-          <div className="gold-divider mx-auto mt-4 max-w-xs" />
-          <div className="mt-8 overflow-hidden rounded-xl gold-border">
+          <div className="divider mx-auto mt-4 max-w-xs" />
+          <div className="mt-8 overflow-hidden rounded-xl border-accent">
             <iframe
               title="ASTRA Office Location — Palitana, Bhavnagar"
               src="https://www.openstreetmap.org/export/embed.html?bbox=71.83%2C21.51%2C71.89%2C21.55&layer=mapnik&marker=21.53%2C71.86"
