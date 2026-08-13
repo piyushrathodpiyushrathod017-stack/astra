@@ -96,8 +96,6 @@
   --color-info: var(--info);
   --color-astra-primary: var(--astra-primary);
   --color-astra-secondary: var(--astra-secondary);
-  --color-astra-gold: var(--astra-gold);
-  --color-astra-gold-light: var(--astra-gold-light);
   --color-astra-glow: var(--astra-glow);
   --color-astra-muted: var(--astra-muted);
   --font-heading: "Playfair Display", "Georgia", "Times New Roman", serif;
@@ -174,20 +172,20 @@ html {
 .glass-card {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 168, 67, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.08);
 }
 
 .dark .glass-card {
   background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(212, 168, 67, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .glow-border {
-  box-shadow: 0 0 20px rgba(212, 168, 67, 0.12), 0 0 40px rgba(212, 168, 67, 0.04);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.12), 0 0 40px rgba(99, 102, 241, 0.04);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #d4a843, #f5e6b8, #d4a843);
+  background: linear-gradient(135deg, #6366F1, #A78BFA, #6366F1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -199,32 +197,32 @@ html {
 
 .card-hover:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 30px rgba(212, 168, 67, 0.08);
-  border-color: rgba(212, 168, 67, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 30px rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
 .astra-gradient {
-  background: linear-gradient(135deg, #b8860b 0%, #d4a843 40%, #f5e6b8 70%, #d4a843 100%);
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 40%, #A78BFA 70%, #6366F1 100%);
 }
 
 .astra-gradient-text {
-  background: linear-gradient(135deg, #b8860b 0%, #d4a843 50%, #f5e6b8 100%);
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #A78BFA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gold-divider {
+.divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
 }
 
-.gold-border {
-  border: 1px solid rgba(212, 168, 67, 0.15);
+.border-accent {
+  border: 1px solid rgba(99, 102, 241, 0.15);
 }
 
-.gold-border-hover:hover {
-  border-color: rgba(212, 168, 67, 0.35);
+.border-accent-hover:hover {
+  border-color: rgba(99, 102, 241, 0.35);
 }
 
 @keyframes astra-float {
@@ -238,8 +236,8 @@ html {
 }
 
 @keyframes astra-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 67, 0.15); }
-  50% { box-shadow: 0 0 40px rgba(212, 168, 67, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.3); }
 }
 
 .animate-float {
@@ -289,7 +287,7 @@ html {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 67, 0.08), transparent);
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.08), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
@@ -348,12 +346,12 @@ html {
 .glass-card-enhanced {
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 168, 67, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.06);
 }
 
 .dark .glass-card-enhanced {
   background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(212, 168, 67, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.05);
 }
 
 .section-reveal {
@@ -385,14 +383,14 @@ html {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(212, 168, 67, 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(212, 168, 67, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 168, 67, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -411,56 +409,56 @@ html {
   border-radius: 4px;
 }
 
-.prose-gold {
+.prose {
   color: var(--foreground);
 }
 
-.prose-gold h1, .prose-gold h2, .prose-gold h3, .prose-gold h4 {
+.prose h1, .prose h2, .prose h3, .prose h4 {
   color: var(--foreground);
   font-family: var(--font-heading);
 }
 
-.prose-gold a {
+.prose a {
   color: var(--astra-primary);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.prose-gold a:hover {
+.prose a:hover {
   color: var(--astra-secondary);
 }
 
-.prose-gold strong {
+.prose strong {
   color: var(--foreground);
   font-weight: 600;
 }
 
-.prose-gold ul, .prose-gold ol {
+.prose ul, .prose ol {
   padding-left: 1.5rem;
 }
 
-.prose-gold li {
+.prose li {
   margin: 0.35rem 0;
   line-height: 1.7;
 }
 
-.prose-gold p {
+.prose p {
   margin: 0.75rem 0;
   line-height: 1.8;
 }
 
-.prose-gold section {
+.prose section {
   margin: 2rem 0;
 }
 
-.prose-gold section h2 {
+.prose section h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border);
 }
 
-.prose-gold section h3 {
+.prose section h3 {
   font-size: 1.15rem;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
