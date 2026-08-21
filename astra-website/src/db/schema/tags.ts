@@ -8,7 +8,7 @@ export const tags = pgTable("tags", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const tagArticleCategories = pgTable("article_categories", {
+export const tagArticleCategories = pgTable("tag_article_categories", {
   id: uuid("id").defaultRandom().primaryKey(),
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
@@ -19,14 +19,14 @@ export const tagArticleCategories = pgTable("article_categories", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
-export const tagArticleTags = pgTable("article_tags", {
+export const tagArticleTags = pgTable("tag_article_tags", {
   id: uuid("id").defaultRandom().primaryKey(),
   articleId: uuid("article_id").notNull(),
   tagId: uuid("tag_id").notNull().references(() => tags.id, { onDelete: "cascade" }),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const tagToolFeatures = pgTable("tool_features", {
+export const tagToolFeatures = pgTable("tag_tool_features", {
   id: uuid("id").defaultRandom().primaryKey(),
   toolId: uuid("tool_id").notNull().references(() => tools.id, { onDelete: "cascade" }),
   name: text("name").notNull(),
@@ -36,7 +36,7 @@ export const tagToolFeatures = pgTable("tool_features", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const tagToolPlatforms = pgTable("tool_platforms", {
+export const tagToolPlatforms = pgTable("tag_tool_platforms", {
   id: uuid("id").defaultRandom().primaryKey(),
   toolId: uuid("tool_id").notNull().references(() => tools.id, { onDelete: "cascade" }),
   platform: text("platform").notNull(),

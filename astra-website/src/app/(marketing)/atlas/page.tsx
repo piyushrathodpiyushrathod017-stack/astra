@@ -10,7 +10,7 @@ import {
   AnimatedHeroSubtitle,
 } from "@/components/shared/animated-hero";
 import { AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
-import { Code, Globe, Sparkles, Cpu, Wrench, Star } from "lucide-react";
+import { Code, Globe, Sparkles, Cpu, Wrench } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({

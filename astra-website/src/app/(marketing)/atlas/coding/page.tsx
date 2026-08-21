@@ -4,8 +4,10 @@ import { AstraSection } from "@/components/layout/astra-section";
 import { AstraGrid } from "@/components/layout/astra-grid";
 import { AstraCard } from "@/components/shared/astra-card";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { Code, Star, ExternalLink } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
+import { tools as allTools } from "@/lib/mock-data";
 
 export const metadata: Metadata = createMetadata({
   title: "AI Coding Tools",
@@ -23,56 +25,14 @@ export const metadata: Metadata = createMetadata({
   ],
 });
 
-const tools = [
-  {
-    name: "GitHub Copilot",
-    description: "AI pair programmer that suggests code completions and entire functions.",
-    category: "Code Completion",
-    rating: "4.6",
-    url: "https://github.com/features/copilot",
-  },
-  {
-    name: "Cursor",
-    description: "AI-first code editor built on VS Code with advanced AI capabilities.",
-    category: "Code Editor",
-    rating: "4.7",
-    url: "https://cursor.sh",
-  },
-  {
-    name: "Tabnine",
-    description: "AI code completion that runs locally or in the cloud.",
-    category: "Code Completion",
-    rating: "4.5",
-    url: "https://www.tabnine.com",
-  },
-  {
-    name: "Codeium",
-    description: "Free AI code completion and chat for developers.",
-    category: "Code Completion",
-    rating: "4.4",
-    url: "https://codeium.com",
-  },
-  {
-    name: "Amazon CodeWhisperer",
-    description: "AI coding companion from AWS for building applications.",
-    category: "Code Generation",
-    rating: "4.3",
-    url: "https://aws.amazon.com/codewhisperer",
-  },
-  {
-    name: "Sourcegraph Cody",
-    description: "AI coding assistant that understands your entire codebase.",
-    category: "Code Intelligence",
-    rating: "4.5",
-    url: "https://sourcegraph.com/cody",
-  },
-];
+const tools = allTools.filter((t) => t.category === "Coding");
 
 export default function AtlasCodingPage() {
   return (
     <>
       <AstraSection className="pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AstraContainer>
+          <Breadcrumbs items={[{ label: "Atlas", href: "/atlas" }, { label: "AI Coding", href: "/atlas/coding" }]} />
           <div className="text-center mb-12">
             <AstraBadge variant="primary" className="mb-6">
               AI Coding
@@ -110,7 +70,7 @@ export default function AtlasCodingPage() {
                 </div>
                 <p className="text-sm text-muted-foreground mb-3">{tool.description}</p>
                 <a
-                  href={tool.url}
+                  href={tool.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm text-astra-primary hover:underline"

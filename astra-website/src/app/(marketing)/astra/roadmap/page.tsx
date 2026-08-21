@@ -3,100 +3,111 @@ import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraCard } from "@/components/shared/astra-card";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import {
   AnimatedHero,
+  AnimatedHeroBadge,
   AnimatedHeroTitle,
   AnimatedHeroSubtitle,
 } from "@/components/shared/animated-hero";
-import { AnimatedSection } from "@/components/shared/animated-section";
+import { AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
+import { CheckCircle, Circle, Clock } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "ASTRA Roadmap",
+  title: "Roadmap — ASTRA",
   description:
-    "See what's coming next for ASTRA. Our development roadmap from foundation to intelligence to scale.",
+    "See what is planned for the ASTRA AI agent framework. Upcoming features, milestones, and release timeline.",
   path: "/astra/roadmap",
   tags: [
     "ASTRA roadmap",
-    "ASTRA development",
-    "AI OS roadmap",
-    "AI platform roadmap",
-    "ASTRA release plan",
+    "AI agent framework plans",
+    "upcoming features",
+    "release timeline",
   ],
 });
-import { CheckCircle, Clock, Circle } from "lucide-react";
 
-const phases = [
+type PhaseStatus = "completed" | "in-progress" | "planned";
+
+const phases: {
+  title: string;
+  date: string;
+  status: PhaseStatus;
+  items: string[];
+}[] = [
   {
-    name: "Phase 1: Foundation",
+    title: "Phase 1: Foundation",
+    date: "Q1 2026",
+    status: "completed",
+    items: [
+      "Core reasoning engine with chain-of-thought",
+      "Basic tool registry and execution",
+      "Short-term working memory",
+      "CLI and API interfaces",
+    ],
+  },
+  {
+    title: "Phase 2: Memory & Learning",
+    date: "Q2 2026",
+    status: "completed",
+    items: [
+      "Long-term episodic memory backend",
+      "Adaptive learning loops with feedback",
+      "Memory retrieval and ranking",
+      "Session persistence and replay",
+    ],
+  },
+  {
+    title: "Phase 3: Multi-Agent",
+    date: "Q3 2026",
     status: "in-progress",
     items: [
-      { name: "Project Setup & Configuration", status: "completed" },
-      { name: "Database Schema Design", status: "completed" },
-      { name: "Core Architecture Design", status: "completed" },
-      { name: "Module System Framework", status: "in-progress" },
-      { name: "Event System", status: "planned" },
-      { name: "Configuration Management", status: "planned" },
+      "Agent-to-agent communication protocol",
+      "Shared state management",
+      "Task delegation and coordination",
+      "Agent specialization and roles",
     ],
   },
   {
-    name: "Phase 2: Core Intelligence",
+    title: "Phase 4: Production",
+    date: "Q4 2026",
     status: "planned",
     items: [
-      { name: "Task Router", status: "planned" },
-      { name: "Rule Engine", status: "planned" },
-      { name: "Provider Abstraction", status: "planned" },
-      { name: "Context Management", status: "planned" },
-      { name: "Memory System", status: "planned" },
+      "Enterprise authentication and RBAC",
+      "Observability dashboard and tracing",
+      "Rate limiting and cost controls",
+      "SOC 2 compliance and audit logging",
     ],
   },
   {
-    name: "Phase 3: User Interface",
+    title: "Phase 5: Ecosystem",
+    date: "Q1 2027",
     status: "planned",
     items: [
-      { name: "CLI Interface", status: "planned" },
-      { name: "Web Dashboard", status: "planned" },
-      { name: "System Tray Integration", status: "planned" },
-      { name: "Notification System", status: "planned" },
-    ],
-  },
-  {
-    name: "Phase 4: Modules",
-    status: "planned",
-    items: [
-      { name: "Application Manager", status: "planned" },
-      { name: "File Manager", status: "planned" },
-      { name: "Calendar Integration", status: "planned" },
-      { name: "Communication Hub", status: "planned" },
-    ],
-  },
-  {
-    name: "Phase 5: Advanced Features",
-    status: "planned",
-    items: [
-      { name: "Workflow Automation", status: "planned" },
-      { name: "Knowledge Graph", status: "planned" },
-      { name: "Multi-Agent Orchestration", status: "planned" },
-      { name: "Plugin System", status: "planned" },
-    ],
-  },
-  {
-    name: "Phase 6: Polish & Scale",
-    status: "future",
-    items: [
-      { name: "Performance Optimization", status: "future" },
-      { name: "Security Audit", status: "future" },
-      { name: "Documentation", status: "future" },
-      { name: "Community & Ecosystem", status: "future" },
+      "Public tool marketplace",
+      "Community agent templates",
+      "Plugin SDK for third-party extensions",
+      "Multi-language SDK support",
     ],
   },
 ];
 
-const statusConfig = {
-  completed: { icon: CheckCircle, color: "text-green-500", badge: "primary" as const },
-  "in-progress": { icon: Clock, color: "text-astra-primary", badge: "secondary" as const },
-  planned: { icon: Circle, color: "text-muted-foreground", badge: "secondary" as const },
-  future: { icon: Circle, color: "text-muted-foreground", badge: "secondary" as const },
+const statusConfig: Record<PhaseStatus, { icon: typeof CheckCircle; color: string; label: string }> = {
+  completed: {
+    icon: CheckCircle,
+    color: "text-green-500",
+    label: "Completed",
+  },
+  "in-progress": {
+    icon: Clock,
+    color: "text-astra-primary",
+    label: "In Progress",
+  },
+  planned: {
+    icon: Circle,
+    color: "text-muted-foreground",
+    label: "Planned",
+  },
 };
 
 export default function AstraRoadmapPage() {
@@ -105,13 +116,23 @@ export default function AstraRoadmapPage() {
       <AstraSection className="relative pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AnimatedHero>
           <AstraContainer>
+            <Breadcrumbs
+              items={[
+                { label: "ASTRA", href: "/astra" },
+                { label: "Roadmap", href: "/astra/roadmap" },
+              ]}
+            />
             <div className="text-center mb-12">
-              <AnimatedHeroTitle>
-                Development Roadmap
+              <AnimatedHeroBadge>
+                <AstraBadge variant="primary" className="mb-6">
+                  Roadmap
+                </AstraBadge>
+              </AnimatedHeroBadge>
+              <AnimatedHeroTitle className="mt-6">
+                What is Next
               </AnimatedHeroTitle>
               <AnimatedHeroSubtitle>
-                ASTRA is being built in phases, each building on the previous.
-                Here is the journey from foundation to full capability.
+                Our plan for building the most capable AI agent framework.
               </AnimatedHeroSubtitle>
             </div>
           </AstraContainer>
@@ -120,41 +141,51 @@ export default function AstraRoadmapPage() {
 
       <AstraSection className="py-12">
         <AstraContainer>
-          <AnimatedSection>
-            <div className="mx-auto max-w-4xl">
-              <div className="relative border-l-2 border-border pl-8 space-y-12">
-                {phases.map((phase) => {
-                  const config = statusConfig[phase.status as keyof typeof statusConfig];
-                  const StatusIcon = config.icon;
-                  return (
-                    <div key={phase.name} className="relative">
-                      <div className={`absolute -left-10 top-1 h-5 w-5 rounded-full bg-background border-2 border-border flex items-center justify-center`}>
-                        <StatusIcon className={`h-3 w-3 ${config.color}`} />
+          <AnimatedStagger className="space-y-6" stagger={0.1}>
+            {phases.map((phase) => {
+              const config = statusConfig[phase.status];
+              const StatusIcon = config.icon;
+              return (
+                <StaggerItem key={phase.title}>
+                  <AstraCard>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                      <div className="flex items-center gap-3">
+                        <StatusIcon className={`h-5 w-5 ${config.color}`} />
+                        <h3 className="font-semibold text-foreground text-lg">
+                          {phase.title}
+                        </h3>
                       </div>
-                      <AstraCard>
-                        <div className="flex items-center justify-between mb-4">
-                          <h2 className="text-xl font-bold text-foreground">{phase.name}</h2>
-                          <AstraBadge variant={config.badge}>{phase.status}</AstraBadge>
-                        </div>
-                        <div className="space-y-2">
-                          {phase.items.map((item) => {
-                            const itemConfig = statusConfig[item.status as keyof typeof statusConfig];
-                            const ItemIcon = itemConfig.icon;
-                            return (
-                              <div key={item.name} className="flex items-center gap-3">
-                                <ItemIcon className={`h-4 w-4 ${itemConfig.color} shrink-0`} />
-                                <span className="text-sm text-muted-foreground">{item.name}</span>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </AstraCard>
+                      <div className="flex items-center gap-2">
+                        <AstraBadge variant="outline">{phase.date}</AstraBadge>
+                        <AstraBadge
+                          variant={
+                            phase.status === "completed"
+                              ? "primary"
+                              : phase.status === "in-progress"
+                                ? "secondary"
+                                : "outline"
+                          }
+                        >
+                          {config.label}
+                        </AstraBadge>
+                      </div>
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          </AnimatedSection>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {phase.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-astra-primary/60 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </AstraCard>
+                </StaggerItem>
+              );
+            })}
+          </AnimatedStagger>
         </AstraContainer>
       </AstraSection>
     </>

@@ -13,7 +13,7 @@ export default function AuthErrorPage() {
         <p className="text-muted-foreground">
           Something went wrong during authentication. Please try again.
         </p>
-        <a href="/auth/signin" className="text-primary hover:underline">
+        <a href="/signin" className="text-primary hover:underline">
           Return to sign in
         </a>
       </div>

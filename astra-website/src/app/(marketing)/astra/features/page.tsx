@@ -3,137 +3,90 @@ import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraCard } from "@/components/shared/astra-card";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import {
   AnimatedHero,
+  AnimatedHeroBadge,
   AnimatedHeroTitle,
   AnimatedHeroSubtitle,
 } from "@/components/shared/animated-hero";
-import { AnimatedSection, AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
+import { AnimatedStagger, StaggerItem } from "@/components/shared/animated-section";
+import {
+  Brain,
+  Database,
+  Wrench,
+  GraduationCap,
+  Shield,
+  Workflow,
+  MessageSquare,
+  BarChart3,
+} from "lucide-react";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "ASTRA Features",
+  title: "Features — ASTRA",
   description:
-    "Explore ASTRA features: intelligent task routing, multi-provider AI, permission-based memory, context-aware automation, and extensible modules.",
+    "Explore the full feature set of the ASTRA AI agent framework: intelligence, memory, tools, learning, security, and more.",
   path: "/astra/features",
   tags: [
     "ASTRA features",
-    "AI OS features",
-    "intelligent task routing",
-    "multi-provider AI",
-    "permission-based memory",
-    "AI automation",
+    "AI agent capabilities",
+    "intelligent agents",
+    "memory systems",
+    "tool orchestration",
   ],
 });
-import {
-  Brain,
-  MemoryStick,
-  MessageSquare,
-  Settings,
-  Workflow,
-  Wrench,
-  BookOpen,
-  Globe,
-  Bot,
-  Puzzle,
-} from "lucide-react";
 
-const categories = [
+const features = [
   {
-    name: "Intelligence",
     icon: Brain,
-    features: [
-      { name: "Task Routing", description: "Automatically routes tasks to the appropriate handler based on complexity.", status: "planned" },
-      { name: "Multi-Provider AI", description: "Seamlessly switch between OpenAI, Anthropic, local models, and more.", status: "planned" },
-      { name: "Context Window Management", description: "Intelligent management of context across conversations and tasks.", status: "planned" },
-    ],
+    title: "Advanced Intelligence",
+    description:
+      "State-of-the-art reasoning with chain-of-thought prompting, multi-step planning, and goal decomposition for complex tasks.",
   },
   {
-    name: "Memory",
-    icon: MemoryStick,
-    features: [
-      { name: "Permission-Based Memory", description: "Long-term memory that requires explicit user approval before storing.", status: "planned" },
-      { name: "Semantic Recall", description: "Find relevant past information using natural language queries.", status: "planned" },
-      { name: "Memory Dashboard", description: "View and manage all stored memories with full transparency.", status: "planned" },
-    ],
+    icon: Database,
+    title: "Persistent Memory",
+    description:
+      "Short-term working memory and long-term episodic storage. Agents remember context, preferences, and past interactions.",
   },
   {
-    name: "Interaction",
-    icon: MessageSquare,
-    features: [
-      { name: "Natural Language Commands", description: "Interact with your system using everyday language.", status: "planned" },
-      { name: "Voice Interface", description: "Hands-free interaction through voice commands.", status: "planned" },
-      { name: "Contextual Suggestions", description: "Proactive suggestions based on your current workflow.", status: "planned" },
-    ],
-  },
-  {
-    name: "System Control",
-    icon: Settings,
-    features: [
-      { name: "Application Management", description: "Open, close, and manage applications through natural commands.", status: "planned" },
-      { name: "File Operations", description: "Search, organize, and manage files with intelligent automation.", status: "planned" },
-      { name: "System Monitoring", description: "Real-time visibility into system resources and processes.", status: "planned" },
-    ],
-  },
-  {
-    name: "Automation",
-    icon: Workflow,
-    features: [
-      { name: "Workflow Builder", description: "Create custom automation workflows with a visual builder.", status: "planned" },
-      { name: "Trigger System", description: "Automate tasks based on time, events, or conditions.", status: "planned" },
-      { name: "Template Library", description: "Pre-built automation templates for common tasks.", status: "planned" },
-    ],
-  },
-  {
-    name: "Developer Tools",
     icon: Wrench,
-    features: [
-      { name: "Module SDK", description: "Build custom modules using a standardized interface.", status: "planned" },
-      { name: "API Gateway", description: "Expose and consume APIs through a unified gateway.", status: "planned" },
-      { name: "Plugin System", description: "Extend ASTRA with third-party plugins.", status: "planned" },
-    ],
+    title: "Tool Orchestration",
+    description:
+      "Automatic tool selection, parameter binding, and result synthesis. Connect to APIs, databases, file systems, and more.",
   },
   {
-    name: "Knowledge",
-    icon: BookOpen,
-    features: [
-      { name: "Knowledge Graph", description: "Connected information graph for contextual understanding.", status: "planned" },
-      { name: "Document Indexing", description: "Automatic indexing of documents for quick retrieval.", status: "planned" },
-      { name: "Citation System", description: "Every piece of information is traceable to its source.", status: "planned" },
-    ],
+    icon: GraduationCap,
+    title: "Adaptive Learning",
+    description:
+      "Self-improving agents that learn from feedback, correct mistakes, and refine strategies over time.",
   },
   {
-    name: "Multilingual",
-    icon: Globe,
-    features: [
-      { name: "Multi-Language Support", description: "Interact in your preferred language with full support.", status: "planned" },
-      { name: "Translation Engine", description: "Real-time translation across documents and conversations.", status: "planned" },
-    ],
+    icon: Shield,
+    title: "Safety & Guardrails",
+    description:
+      "Built-in safety layers with input validation, output filtering, and configurable guardrails for responsible deployment.",
   },
   {
-    name: "Extensibility",
-    icon: Puzzle,
-    features: [
-      { name: "Provider Abstraction", description: "Swap AI providers without changing your workflows.", status: "planned" },
-      { name: "Custom Integrations", description: "Connect to any external service through custom integrations.", status: "planned" },
-    ],
+    icon: Workflow,
+    title: "Multi-Agent Collaboration",
+    description:
+      "Coordinate multiple specialized agents working together on complex workflows with shared state and messaging.",
   },
   {
-    name: "Agent",
-    icon: Bot,
-    features: [
-      { name: "Agent Orchestration", description: "Coordinate multiple AI agents for complex tasks.", status: "planned" },
-      { name: "Agent Memory Sharing", description: "Agents share context and memory for collaborative work.", status: "planned" },
-    ],
+    icon: MessageSquare,
+    title: "Natural Interaction",
+    description:
+      "Human-friendly conversation interfaces with streaming responses, clarifying questions, and contextual awareness.",
+  },
+  {
+    icon: BarChart3,
+    title: "Observability",
+    description:
+      "Full tracing and logging of agent reasoning, tool calls, and decisions for debugging and performance monitoring.",
   },
 ];
-
-const statusColors: Record<string, "primary" | "secondary"> = {
-  available: "primary",
-  "in development": "secondary",
-  planned: "secondary",
-  experimental: "secondary",
-};
 
 export default function AstraFeaturesPage() {
   return (
@@ -141,46 +94,55 @@ export default function AstraFeaturesPage() {
       <AstraSection className="relative pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AnimatedHero>
           <AstraContainer>
+            <Breadcrumbs
+              items={[
+                { label: "ASTRA", href: "/astra" },
+                { label: "Features", href: "/astra/features" },
+              ]}
+            />
             <div className="text-center mb-12">
-              <AnimatedHeroTitle>
-                ASTRA Features
+              <AnimatedHeroBadge>
+                <AstraBadge variant="primary" className="mb-6">
+                  Features
+                </AstraBadge>
+              </AnimatedHeroBadge>
+              <AnimatedHeroTitle className="mt-6">
+                Everything You Need
               </AnimatedHeroTitle>
               <AnimatedHeroSubtitle>
-                Explore the full capabilities of ASTRA. Every feature is designed
-                with our core principles: rule-first, local-first, and user control.
+                A complete toolkit for building production-ready AI agents.
               </AnimatedHeroSubtitle>
             </div>
           </AstraContainer>
         </AnimatedHero>
       </AstraSection>
 
-      {categories.map((category, index) => (
-        <AstraSection key={category.name} className="py-12">
-          <AstraContainer>
-            <AnimatedSection delay={index * 0.1}>
-              <div className="flex items-center gap-3 mb-6">
-                <category.icon className="h-6 w-6 text-astra-primary" />
-                <h2 className="text-2xl font-bold text-foreground">{category.name}</h2>
-              </div>
-            </AnimatedSection>
-            <AnimatedStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" stagger={0.08}>
-              {category.features.map((feature) => (
-                <StaggerItem key={feature.name}>
-                  <AstraCard>
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="font-semibold text-foreground">{feature.name}</h3>
-                      <AstraBadge variant={statusColors[feature.status] || "secondary"}>
-                        {feature.status}
-                      </AstraBadge>
+      <AstraSection className="py-12">
+        <AstraContainer>
+          <AnimatedStagger
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            stagger={0.08}
+          >
+            {features.map((feature) => (
+              <StaggerItem key={feature.title}>
+                <AstraCard className="h-full">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-astra-primary/10">
+                      <feature.icon className="h-5 w-5 text-astra-primary" />
                     </div>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
-                  </AstraCard>
-                </StaggerItem>
-              ))}
-            </AnimatedStagger>
-          </AstraContainer>
-        </AstraSection>
-      ))}
+                    <h3 className="font-semibold text-foreground">
+                      {feature.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {feature.description}
+                  </p>
+                </AstraCard>
+              </StaggerItem>
+            ))}
+          </AnimatedStagger>
+        </AstraContainer>
+      </AstraSection>
     </>
   );
 }

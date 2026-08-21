@@ -4,8 +4,10 @@ import { AstraSection } from "@/components/layout/astra-section";
 import { AstraGrid } from "@/components/layout/astra-grid";
 import { AstraCard } from "@/components/shared/astra-card";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { Globe, Star, ExternalLink } from "lucide-react";
 import { createMetadata } from "@/lib/seo";
+import { tools as allTools } from "@/lib/mock-data";
 
 export const metadata: Metadata = createMetadata({
   title: "Local AI Tools",
@@ -24,56 +26,14 @@ export const metadata: Metadata = createMetadata({
   ],
 });
 
-const tools = [
-  {
-    name: "Ollama",
-    description: "Run large language models locally on your machine with ease.",
-    category: "Model Runner",
-    rating: "4.8",
-    url: "https://ollama.ai",
-  },
-  {
-    name: "LM Studio",
-    description: "Discover, download, and run local LLMs with a beautiful interface.",
-    category: "Model Runner",
-    rating: "4.7",
-    url: "https://lmstudio.ai",
-  },
-  {
-    name: "LocalAI",
-    description: "Free, open source alternative to OpenAI running on consumer hardware.",
-    category: "API Server",
-    rating: "4.5",
-    url: "https://localai.io",
-  },
-  {
-    name: "llama.cpp",
-    description: "Port of Meta's LLaMA model in C/C++ for local inference.",
-    category: "Inference Engine",
-    rating: "4.6",
-    url: "https://github.com/ggerganov/llama.cpp",
-  },
-  {
-    name: "GPT4All",
-    description: "Run GPT4All-style models on your local machine privately.",
-    category: "Desktop App",
-    rating: "4.4",
-    url: "https://gpt4all.io",
-  },
-  {
-    name: "text-generation-webui",
-    description: "A Gradio UI for running large language models locally.",
-    category: "Web UI",
-    rating: "4.3",
-    url: "https://github.com/oobabooga/text-generation-webui",
-  },
-];
+const tools = allTools.filter((t) => t.category === "Local AI");
 
 export default function AtlasLocalAiPage() {
   return (
     <>
       <AstraSection className="pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AstraContainer>
+          <Breadcrumbs items={[{ label: "Atlas", href: "/atlas" }, { label: "Local AI", href: "/atlas/local-ai" }]} />
           <div className="text-center mb-12">
             <AstraBadge variant="primary" className="mb-6">
               Local AI
@@ -111,7 +71,7 @@ export default function AtlasLocalAiPage() {
                 </div>
                 <p className="text-sm text-muted-foreground mb-3">{tool.description}</p>
                 <a
-                  href={tool.url}
+                  href={tool.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm text-astra-primary hover:underline"

@@ -9,14 +9,16 @@ import { createMetadata } from "@/lib/seo";
 import { articles, getArticleBySlug } from "@/lib/mock-data";
 
 export function generateStaticParams() {
-  return Object.keys(posts).map((slug) => ({ slug }));
+  return articles.map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug);
   return createMetadata({
-    title: "Blog Post",
-    description: "Read the latest AI insights and tutorials on ASTRA.",
-    path: "/blog",
+    title: article?.title ?? "Blog Post",
+    description: article?.excerpt ?? "Read the latest AI insights and tutorials on ASTRA.",
+    path: `/blog/${slug}`,
   });
 }
 

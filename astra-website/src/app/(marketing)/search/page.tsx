@@ -6,7 +6,9 @@ import type { Route } from "next";
 import { AstraContainer } from "@/components/layout/astra-container";
 import { AstraSection } from "@/components/layout/astra-section";
 import { AstraBadge } from "@/components/shared/astra-badge";
+import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { Search, Wrench, Database, BarChart3, BookOpen, FileText, ArrowRight } from "lucide-react";
+import { tools, models, comparisons, articles } from "@/lib/mock-data";
 
 type SearchableItem = {
   title: string;
@@ -17,14 +19,10 @@ type SearchableItem = {
 };
 
 const allItems: SearchableItem[] = [
-  { title: "ChatGPT", description: "OpenAI's conversational AI assistant.", category: "Chat", type: "tool", url: "/tools/chatgpt" },
-  { title: "Claude", description: "Anthropic's helpful, harmless, and honest AI.", category: "Chat", type: "tool", url: "/tools/claude" },
-  { title: "Midjourney", description: "AI image generation from text prompts.", category: "Image", type: "tool", url: "/tools/midjourney" },
-  { title: "GPT-4o", description: "Most capable OpenAI model.", category: "OpenAI", type: "model", url: "/models/gpt-4o" },
-  { title: "Claude 3.5 Sonnet", description: "Balanced performance and speed.", category: "Anthropic", type: "model", url: "/models/claude-3.5-sonnet" },
-  { title: "GPT-4 vs Claude 3.5 Sonnet", description: "Chat model comparison.", category: "Chat Models", type: "comparison", url: "/compare/gpt-4-vs-claude-35-sonnet" },
-  { title: "Getting Started with AI", description: "Beginner guide to AI.", category: "Fundamentals", type: "article", url: "/knowledge/getting-started-with-ai" },
-  { title: "The Future of AI in 2026", description: "AI trends for the coming year.", category: "Trends", type: "blog", url: "/blog/future-of-ai-2026" },
+  ...tools.map((t) => ({ title: t.name, description: t.description, category: t.category, type: "tool" as const, url: `/atlas/${t.slug}` })),
+  ...models.map((m) => ({ title: m.name, description: m.description, category: m.provider, type: "model" as const, url: `/atlas/${m.slug}` })),
+  ...comparisons.map((c) => ({ title: c.title, description: c.summary, category: c.category, type: "comparison" as const, url: `/compare/${c.slug}` })),
+  ...articles.map((a) => ({ title: a.title, description: a.excerpt, category: a.category, type: "article" as const, url: `/knowledge/${a.slug}` })),
 ];
 
 const typeIcons = {
@@ -70,6 +68,7 @@ export default function SearchPage() {
     <>
       <AstraSection className="pt-24 pb-16 sm:pt-32 sm:pb-24">
         <AstraContainer>
+          <Breadcrumbs items={[{ label: "Search", href: "/search" }]} />
           <div className="text-center mb-12">
             <AstraBadge variant="primary" className="mb-6">
               Search
